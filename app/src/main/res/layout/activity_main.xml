@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvTitutlo"
+        android:layout_width="347dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:text="Elige tus intereses"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/cbBelleza"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:text="Belleza"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitutlo" />
+
+    <CheckBox
+        android:id="@+id/cbFamilia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="20dp"
+        android:text="Familia"
+        app:layout_constraintStart_toEndOf="@+id/cbBelleza"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitutlo" />
+
+    <CheckBox
+        android:id="@+id/cbLibros"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:text="Libros"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cbBelleza" />
+
+    <CheckBox
+        android:id="@+id/cbComidaBebida"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="84dp"
+        android:text="Comida y bebidas"
+        app:layout_constraintStart_toEndOf="@+id/cbLibros"
+        app:layout_constraintTop_toBottomOf="@+id/cbFamilia" />
+
+    <CheckBox
+        android:id="@+id/cbCarreras"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="31dp"
+        android:text="Carreras"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cbLibros" />
+
+    <CheckBox
+        android:id="@+id/cbVideojuegos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="70dp"
+        android:text="Videojuegos"
+        app:layout_constraintStart_toEndOf="@+id/cbCarreras"
+        app:layout_constraintTop_toBottomOf="@+id/cbComidaBebida" />
+
+    <CheckBox
+        android:id="@+id/cbEducacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:text="Educación"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cbCarreras" />
+
+    <CheckBox
+        android:id="@+id/cbDeportes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:text="Deportes"
+        app:layout_constraintStart_toEndOf="@+id/cbEducacion"
+        app:layout_constraintTop_toBottomOf="@+id/cbVideojuegos" />
+
+    <CheckBox
+        android:id="@+id/cbEventos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:text="Eventos"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cbEducacion" />
+
+    <CheckBox
+        android:id="@+id/cbOtros"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="77dp"
+        android:onClick="otrosGustos"
+        android:text="Otros"
+        app:layout_constraintStart_toEndOf="@+id/cbEventos"
+        app:layout_constraintTop_toBottomOf="@+id/cbDeportes" />
+
+    <Button
+        android:id="@+id/btCargarInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:onClick="cargar"
+        android:text="Cargar info"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etOtrosGustos" />
+
+    <TextView
+        android:id="@+id/tvOtros"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:text="Indica otros gustos"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cbEventos" />
+
+    <EditText
+        android:id="@+id/etOtrosGustos"
+        android:layout_width="335dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="30dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvOtros" />
+
+    <TextView
+        android:id="@+id/tvGustosEscritos"
+        android:layout_width="346dp"
+        android:layout_height="173dp"
+        android:layout_marginStart="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btCargarInfo" />
+</androidx.constraintlayout.widget.ConstraintLayout>
