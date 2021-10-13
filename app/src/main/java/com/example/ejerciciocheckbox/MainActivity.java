@@ -8,6 +8,9 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
 
     private CheckBox cbOtros;
@@ -41,7 +44,29 @@ public class MainActivity extends AppCompatActivity {
         CheckBox cbDeportes = (CheckBox) findViewById(R.id.cbDeportes);
         CheckBox cbEventos = (CheckBox) findViewById(R.id.cbEventos);
 
+        TextView gustosSeleccionados = (TextView) findViewById(R.id.tvGustosSeleccionados);
 
+
+        List<CheckBox> checkBoxes = new ArrayList<>();
+        checkBoxes.add(cbBelleza);
+        checkBoxes.add(cbFamilia);
+        checkBoxes.add(cbLibros);
+        checkBoxes.add(cbComidaYBebida);
+        checkBoxes.add(cbCarreras);
+        checkBoxes.add(cbVideojuegos);
+        checkBoxes.add(cbEducacion);
+        checkBoxes.add(cbDeportes);
+        checkBoxes.add(cbEventos);
+
+        StringBuilder gustos = new StringBuilder("Mis gustos son: \n");
+
+        for (CheckBox checkBox : checkBoxes) {
+            if (checkBox.isChecked()) {
+                gustos.append(checkBox.getText().toString()).append("\n");
+            }
+        }
+
+        gustosSeleccionados.setText(gustos.append(etOtrosGustos.getText()).toString());
 
     }
 
@@ -50,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
         if (cbOtros.isChecked()) {
             tvOtros.setVisibility(View.VISIBLE);
             etOtrosGustos.setVisibility(View.VISIBLE);
-        }else {
+        } else {
             tvOtros.setVisibility(View.GONE);
             etOtrosGustos.setVisibility(View.GONE);
         }
