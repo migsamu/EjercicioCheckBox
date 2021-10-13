@@ -65,8 +65,12 @@ public class MainActivity extends AppCompatActivity {
                 gustos.append(checkBox.getText().toString()).append("\n");
             }
         }
+        if (cbOtros.isChecked()) {
+            gustosSeleccionados.setText(gustos.append(etOtrosGustos.getText()).toString());
+        } else {
+            gustosSeleccionados.setText(gustos.toString());
+        }
 
-        gustosSeleccionados.setText(gustos.append(etOtrosGustos.getText()).toString());
 
     }
 
