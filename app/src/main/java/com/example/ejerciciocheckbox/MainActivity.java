@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -63,10 +64,14 @@ public class MainActivity extends AppCompatActivity {
         for (CheckBox checkBox : checkBoxes) {
             if (checkBox.isChecked()) {
                 gustos.append(checkBox.getText().toString()).append("\n");
+                Toast.makeText(this, gustos, Toast.LENGTH_SHORT).show();
+
             }
         }
         if (cbOtros.isChecked()) {
             gustosSeleccionados.setText(gustos.append(etOtrosGustos.getText()).toString());
+            Toast.makeText(this, gustos, Toast.LENGTH_SHORT).show();
+
         } else {
             gustosSeleccionados.setText(gustos.toString());
         }
